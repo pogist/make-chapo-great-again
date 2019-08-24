@@ -4,15 +4,17 @@
   "description": "Replaces all occurrences of the f*cking terrible new facebook's frog emoji with the old one.",
   "manifest_version": 2,
   "author": "Murilo da PaixÃ£o",
-  "icons": { "16": "icon/chapo.png",
-             "48": "icon/chapo.png",
-             "128": "icon/chapo.png" },
+  "icons": {
+    "16": "icon/chapo.png",
+    "48": "icon/chapo.png",
+    "128": "icon/chapo.png"
+  },
   "content_scripts": [{
-    "js": ["content.js"],
+    "js": ["dist/content.js"],
     "matches": ["*://facebook.com/*"]
   }],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["dist/background.js"]
   },
   "permissions": [
     "*://*/*", "*://facebook.com/*", "tabs"
