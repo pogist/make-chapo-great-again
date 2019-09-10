@@ -7,4 +7,7 @@ module.exports = {
   plugins: [
     'flowtype',
   ],
+  env: {
+    browser: true,
+  },
 };
