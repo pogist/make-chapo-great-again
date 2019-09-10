@@ -13,7 +13,7 @@ function updateChatTabs() {
     const chapos = chapoDOM.filterChapos(tab.getElementsByTagName('img'));
 
     for (let j = 0; j < chapos.length; j += 1) {
-      const chapo: HTMLImageElement = chapos[j];
+      const chapo = chapos[j];
       chapo.src = chapoDOM.actualChapoURL;
     }
   }
