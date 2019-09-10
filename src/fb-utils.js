@@ -12,7 +12,12 @@ function getVisiblePosts(dom: Document): NodeList<HTMLElement> {
   return dom.querySelectorAll('div[role=\'article\']');
 }
 
+function getChatsPreviewBox(dom: Document): NodeList<HTMLElement> {
+  return dom.querySelectorAll('ul.jewelContent');
+}
+
 export default {
   getChatTabs,
   getVisiblePosts,
+  getChatsPreviewBox,
 };

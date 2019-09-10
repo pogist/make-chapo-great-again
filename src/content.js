@@ -5,8 +5,7 @@
 import fb from './fb-utils';
 import chapoDOM from './chapo-dom';
 
-function updateDOM() {
-  // Update chat tabs
+function updateChatTabs() {
   const chatTabs = fb.getChatTabs(document);
 
   for (let i = 0; i < chatTabs.length; i += 1) {
@@ -18,8 +17,9 @@ function updateDOM() {
       chapo.src = chapoDOM.actualChapoURL;
     }
   }
+}
 
-  // Update posts and comments
+function updatePostsAndComments() {
   const posts = fb.getVisiblePosts(document);
 
   for (let i = 0; i < posts.length; i += 1) {
@@ -33,5 +33,20 @@ function updateDOM() {
   }
 }
 
+function updateChatsPreview() {
+  const previewBox = fb.getChatsPreviewBox(document)[0]; // There's only one of this
+
+  if (previewBox) {
+    const chapos = chapoDOM.filterChapos(previewBox.getElementsByTagName('img'));
+
+    for (let i = 0; i < chapos.length; i += 1) {
+      const chapo = chapos[i];
+      chapo.src = chapoDOM.actualChapoURL;
+    }
+  }
+}
+
 // Apply dom updates every 10 milliseconds
-setInterval(updateDOM, 10);
+setInterval(updateChatTabs, 10);
+setInterval(updatePostsAndComments, 10);
+setInterval(updateChatsPreview, 10);
