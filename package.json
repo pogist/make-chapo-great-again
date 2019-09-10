@@ -4,9 +4,10 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
+    "build:js": "webpack --mode production",
     "flow": "flow",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:extension": "yarn build:js && ./scripts/compress_extension.sh"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
