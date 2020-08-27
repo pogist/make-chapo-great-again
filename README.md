@@ -8,10 +8,9 @@ This extension replaces occurrences of the new facebooks's frog emoji with the o
 
 Right now, those are the places where the extension is able to replace chapos:
 
-- chats
-- posts
-- comments
-- chats preview
+- chat tab
+- feed units (and its comments)
+- messenger dialog
 
 ### Running the extension on chrome
 
@@ -20,7 +19,7 @@ First of all, clone and build the project.
 ```sh
 $ git clone https://github.com/pogist/make-chapo-great-again
 $ cd make-chapo-great-again
-$ yarn install && yarn build:ext
+$ yarn install && yarn zip
 ```
 
 Then, open the newly generated `dist` folder on chrome.
