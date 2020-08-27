@@ -4,10 +4,11 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build:js": "webpack --mode production",
+    "build": "webpack --mode production",
     "flow": "flow",
     "lint": "eslint .",
-    "build:ext": "yarn build:js && ./scripts/compress_extension.sh"
+    "zip": "yarn build && ./scripts/compress_extension.sh",
+    "clean": "rimraf dist make-chapo-great-again.zip"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
@@ -21,6 +22,7 @@
     "eslint-plugin-flowtype": "4.2.0",
     "eslint-plugin-import": "2.18.2",
     "flow-bin": "0.106.1",
+    "rimraf": "3.0.2",
     "webpack": "4.39.2",
     "webpack-cli": "3.3.7"
   }
