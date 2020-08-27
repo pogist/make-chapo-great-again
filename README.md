@@ -26,6 +26,7 @@ Then, open the newly generated `dist` folder on chrome.
 
 <img src="./assets/screenshot_1.png"></img>
 <img src="./assets/screenshot_2.png"></img>
+<img src="./assets/screenshot_3.png"></img>
 
 # License
 The MIT License (MIT)
